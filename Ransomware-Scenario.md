@@ -31,7 +31,9 @@ This query was used to identify the most critical security alerts generated with
 **Outcome:**
 Successfully validated the phishing campaign as a true positive security incident and established the starting point of the attack chain.
 
----
+---* **Outcome:** Successfully validated the phishing campaign as a true positive security incident and established the starting point of the attack chain.
+
+![Incident Triage Alerts](hunting.png)
 
 ### Step 2: Evidence Investigation – Identifying Malicious Infrastructure
 
@@ -41,7 +43,9 @@ AlertEvidence
 | project Timestamp, AlertId, EntityType, EvidenceRole
 | top 10 by Timestamp desc
 ```
+* **Outcome:** Successfully identified and attributed malicious activity to an external threat source, enabling rapid containment actions.
 
+![Evidence Investigation Log](hunting2.png)
 **Purpose:**
 This query was executed to examine entities associated with the detected alerts and identify attacker-controlled infrastructure involved in the compromise.
 
@@ -84,6 +88,8 @@ Following confirmation of malicious activity, immediate containment and remediat
 * Enhanced continuous monitoring for suspicious authentication and lateral movement activities.
 
 ---
+
+![Incident Remediation and Closure](hunting3.png)
 
 ## ✅ Lessons Learned
 
